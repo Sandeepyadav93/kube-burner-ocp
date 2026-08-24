@@ -139,5 +139,5 @@ func NewClusterDensity(wh *workloads.WorkloadHelper, variant string) *cobra.Comm
 }
 
 func clusterDensityNeedsIngressDomain(variant string) bool {
-	return variant != "cluster-density-ms"
+	return variant != "cluster-density-ms" && variant != "cluster-density-v2"
 }

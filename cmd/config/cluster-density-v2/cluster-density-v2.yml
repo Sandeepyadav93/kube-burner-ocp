@@ -87,9 +87,6 @@ jobs:
       - objectTemplate: service.yml
         replicas: 5
         
-      - objectTemplate: route.yml
-        replicas: 2
-
       - objectTemplate: secret.yml
         replicas: 10
 
@@ -102,9 +99,6 @@ jobs:
       - objectTemplate: np-allow-from-clients.yml
         replicas: 1
 
-      - objectTemplate: np-allow-from-ingress.yml
-        replicas: 1
-
       - objectTemplate: deployment-server.yml
         replicas: 3
         inputVars:
@@ -115,5 +109,4 @@ jobs:
         replicas: 2
         inputVars:
           podReplicas: 2
-          ingressDomain: {{.INGRESS_DOMAIN}}
           nodeSelector: {{.NODE_SELECTOR}}
